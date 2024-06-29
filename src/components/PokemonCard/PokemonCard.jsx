@@ -8,17 +8,19 @@ const PokemonCard = ({ name }) => { // een functioneel component PokemonCard dat
         fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)
             .then(response => response.json())
             .then(data => setPokemon(data));
-    }, [name]); // de useEffect hook wordt alleen uitgevoerd als de prop 'name' verandert
+    }, [name]); // useEffect hook uitgevoerd als de prop 'name' verandert
 
     if (!pokemon) return <div>Loading...</div>; // als pokemon null is, return 'Loading...'
 
     return (
-        <div>
+        <div className='pokemon-selected'>
             <h2>{pokemon.name}</h2>
-            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
+            <p>Pokedex# {pokemon.number}</p>
             <p>Height: {pokemon.height}</p>
             <p>Weight: {pokemon.weight}</p>
             <p>Type: {pokemon.types.map(type => type.type.name).join(', ')}</p>
+
         </div>
     );
 };
