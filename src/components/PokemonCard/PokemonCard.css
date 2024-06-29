@@ -1,12 +1,43 @@
-.pokemon-selected {
+.pokemon-selection {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #747bff;
     border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    margin: 20px auto;
+    background-color: mintcream;
+    width: 250px; /* Standaard breedte voor alle kaartjes */
+    height: 350px; /* Standaard hoogte voor alle kaartjes */
+    margin: 10px auto; /* Centrerende marge */
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: max(200px, 50%);
+    position: relative; /* Voor absolute positionering van kindelementen */
+
+}
+
+.pokemon-id {
+    position: absolute;
+    top: 10px; /* Afstand van de bovenkant */
+    right: 10px; /* Afstand van de rechterkant */
+    background-color: rgba(255, 255, 255, 0.8); /* Achtergrondkleur om leesbaarheid te verbeteren */
+    margin: 2px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pokemon-image {
+    width: 100px; /* Standaard breedte voor de afbeelding */
+    height: 100px; /* Standaard hoogte voor de afbeelding */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding goed past */
+    margin: 0;
+    padding: 3px;
+    border: 2px #747bff inset;
+    border-radius: 5px;
+}
+
+.pokemon-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Zorg ervoor dat de stats de volledige breedte benutten */
+    margin: 0;
 }
