@@ -1,7 +1,7 @@
 import PokemonCard from './components/PokemonCard/PokemonCard';
-
 import './App.css'
 import {useEffect, useState} from "react";
+import pokemonLogo from './assets/pokemonLogo.png';
 
 function App() {
     const [pokemonList, setPokemonList] = useState([]);
@@ -50,10 +50,14 @@ function App() {
     // )
     return (
         <>
-            <header className='header'><h1>Gotta catch em all!</h1></header>
+            <header className='header'>
+                <img src={pokemonLogo} alt='Pokemon logo'/>
+                <h1>Gotta catch em all!</h1>
+            </header>
             <section className='overall-container'>
-                <button className='button previous' onClick={handlePreviousClick} disabled={!previousPokemon}>
-                    Show Previous
+                <button
+                    className='button previous' onClick={handlePreviousClick} disabled={!previousPokemon}>
+                    Previous
                     <br/>
                     20 Pokemon
                 </button>
@@ -62,15 +66,13 @@ function App() {
                         <div key={pokemon.name}>
                             <PokemonCard name={pokemon.name}/>
                         </div>
-
                     ))}
                 </div>
                 <button className='button next' onClick={handleNextClick} disabled={!nextPokemon}>
-                    Show Next
+                    Next
                     <br/>
                     20 Pokemon
                 </button>
-
             </section>
         </>
     );

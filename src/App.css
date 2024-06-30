@@ -1,14 +1,28 @@
 /*Schrijf hier jouw eigen CSS!*/
+H1 {
+    color: #FFCB05;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
 .header {
     display: flex;
     flex-direction: column;
-    align-items: center;}
+    align-items: center;
+    background-color: #F24236;
+}
+
+.header img {
+    max-width: 500px; /* Pas deze waarde aan om de grootte van de afbeelding te veranderen */
+}
 
 .overall-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    background-color: #FFCB05;
     max-height: 80%;
 }
 
@@ -17,17 +31,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    border: orange dotted 2px;
-    background-color: goldenrod;
+    justify-content: space-around;
+    background-color: #FFCB05;
     width: 85%;
 }
 
 .button {
-    border: #747bff dotted 2px;
-    background-color: mintcream;
+    border: 2px solid #747bff;
+    background-color: #F8F0FB;
     color: #747bff;
-    disabled: false;
+    margin: 10px 2px;
+
 }
 
 .button button:disabled {
